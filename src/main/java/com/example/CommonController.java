@@ -16,9 +16,12 @@ import java.util.Map;
 @RestController
 public class CommonController {
     @RequestMapping("/test")
-    public HttpEntity<Map<String, Object>> test() throws Exception{
+    public HttpEntity<Map<String, Object>> test(DefaultParams defaultParams) throws Exception{
         Map<String, Object> resMap = new HashMap<>();
         resMap.put("a", "a");
+        resMap.put("b", "");
+        resMap.put("c", "c");
+        resMap.putAll(defaultParams.getMap());
         return new ResponseEntity<Map<String, Object>>(resMap, HttpStatus.OK);
     }
 
