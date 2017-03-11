@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="./js/core/angular.js"></script>
+    <script src="./js/memo/controller/TestController.js"></script>
 </head>
-<body>
-    안녕하세요 진환이 블로그에 오신것을 환영 합니다.
+<body ng-app="myApp"> 진환이 블로그에 오신것을 환영 합니다.
+    <div ng-controller="TestController">
+        {{name}}
+    </div>
 </body>
 </html>
