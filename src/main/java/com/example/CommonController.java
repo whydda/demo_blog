@@ -26,9 +26,8 @@ public class CommonController {
     }
 
     @RequestMapping("/test/fileupload")
-    public HttpEntity<Map<String, Object>> postFileUpload(DefaultParams defaultParams) throws Exception {
-        Map<String, Object> resMap = new HashMap<>();
-
+    public HttpEntity<Map<String, Object>> postFileUpload(DefaultParams defaultParams, Map<String, Object> resMap) throws Exception {
+        resMap.put("test","test");
         return new ResponseEntity<Map<String, Object>>(resMap, HttpStatus.OK);
     }
 
