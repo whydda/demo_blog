@@ -1,4 +1,4 @@
-package com.example.common.file;
+package com.example.blog.vo;
 
 import java.util.Map;
 

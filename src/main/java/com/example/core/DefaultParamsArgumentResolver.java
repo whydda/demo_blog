@@ -1,6 +1,6 @@
 package com.example.core;
 
-import com.example.common.file.DefaultParams;
+import com.example.blog.vo.DefaultParams;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -39,9 +39,8 @@ public class DefaultParamsArgumentResolver implements HandlerMethodArgumentResol
             }
 
             //계속 세팅되어야할 파라미터를 입력한다.
-            defaultParams.getMap().put("init1", "a");
-            defaultParams.getMap().put("init2", "b");
-            defaultParams.getMap().put("init3", "c");
+            defaultParams.getMap().put("userId", "whydda");
+            defaultParams.getMap().put("passWd", "1234");
             return defaultParams;
         }
         return null;
