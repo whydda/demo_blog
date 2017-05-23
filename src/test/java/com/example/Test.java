@@ -54,16 +54,5 @@ public class Test {
         System.out.println(cList.toString()); //b, c
         System.out.println(dList.toString()); //b, c
         System.out.println(eList.toString()); //b, c
-
-
-
-
-
-
-
-
-
-
-
     }
 }
