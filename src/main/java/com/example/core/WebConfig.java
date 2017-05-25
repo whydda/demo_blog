@@ -11,6 +11,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.sql.DataSource;
@@ -40,5 +41,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(new ImageServlet());
         registrationBean.addUrlMappings("/image/*");
         return registrationBean;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/image2/**").addResourceLocations("file:D:/2017/imgstoreage/image/");
     }
 }

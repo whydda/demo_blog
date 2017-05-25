@@ -23,7 +23,7 @@ public class SecurityWebApplicationInitializer extends WebSecurityConfigurerAdap
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/index.html", "/test/**", "/image/**", "/console/**").permitAll()
+                .antMatchers("/index.html", "/test/**", "/image/**", "/console/**","/image2/**").permitAll()
                 .antMatchers("/blog/**").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
