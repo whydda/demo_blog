@@ -17,13 +17,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityWebApplicationInitializer extends WebSecurityConfigurerAdapter {
 
-    @Autowired private LoginSuccessHandler loginSuccessHandler;
+    //@Autowired private LoginSuccessHandler loginSuccessHandler;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/index.html", "/test/**").permitAll()
+                .antMatchers("/index.html", "/test/**", "/image/**", "/console/**").permitAll()
                 .antMatchers("/blog/**").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()

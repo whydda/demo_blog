@@ -34,4 +34,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registrationBean.addUrlMappings("/console/*");
         return registrationBean;
     }
+
+    @Bean
+    ServletRegistrationBean imageServlet(){
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(new ImageServlet());
+        registrationBean.addUrlMappings("/image/*");
+        return registrationBean;
+    }
 }
